@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.mbg206.pmwrenderer.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "PMParticleManagerMixin"
+  ],
+  "client": [
+    "ClientLevelMixin",
+    "GameBusClientEventsMixin",
+    "GameRendererMixin",
+    "RenderEventsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

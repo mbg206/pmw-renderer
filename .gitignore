@@ -1,0 +1,18 @@
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+!.idea/scopes
+
+# gradle
+build
+gradle
+.gradle
+
+# other
+run
+.cache
+
+update.json

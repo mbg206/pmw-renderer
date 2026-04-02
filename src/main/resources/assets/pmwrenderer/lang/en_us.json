@@ -1,0 +1,9 @@
+{
+  "config.render_mode": "Render mode",
+  "config.enable_mist": "Enable mist",
+  "config.enable_splash": "Enable splash",
+  "config.enhanced_fog": "Enhanced fog",
+  "config.update_every_ticks": "Update every ticks",
+  "config.particle_crossover": "Particle crossover ticks",
+  "config.fix_bleed": "Fix bleed"
+}
