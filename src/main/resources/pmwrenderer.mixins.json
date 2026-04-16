@@ -4,12 +4,13 @@
   "package": "me.mbg206.pmwrenderer.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "PMParticleManagerMixin"
   ],
   "client": [
     "ClientLevelMixin",
     "GameBusClientEventsMixin",
     "GameRendererMixin",
+    "ModShadersMixin",
+    "PMParticleManagerMixin",
     "RenderEventsMixin"
   ],
   "injectors": {

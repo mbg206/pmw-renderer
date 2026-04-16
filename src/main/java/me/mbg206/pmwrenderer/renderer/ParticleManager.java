@@ -219,7 +219,7 @@ public class ParticleManager {
         cloud.ticksFadeOutMax = 40;
         cloud.tick();
 
-        cloud.getBoundingBoxForRender().inflate(256);
+        cloud.bbRender = cloud.bbRender.inflate(32);
 
         return cloud;
     }
