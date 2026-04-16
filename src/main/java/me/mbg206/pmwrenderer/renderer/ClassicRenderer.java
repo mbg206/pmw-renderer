@@ -123,10 +123,4 @@ public class ClassicRenderer {
         float m = (float)Math.max(ServerConfig.overcastPercent - overcastDampen, 0.0);
         return Mth.clamp(c * m, 0.0F, 1.0F);
     }
-
-
-    @SubscribeEvent
-    public static void render(RenderLevelStageEvent event) {
-        System.out.println(event.getStage().toString());
-    }
 }
