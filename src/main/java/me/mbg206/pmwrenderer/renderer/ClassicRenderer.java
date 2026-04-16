@@ -92,9 +92,16 @@ public class ClassicRenderer {
     public static Vec3 getCloudColor() {
         float sunAng = Minecraft.getInstance().level.getSunAngle(0);
         double sunY = Math.cos(sunAng);
-        return (new Vec3(1.0, 0.992, 0.957)).scale(1.05)
-            .lerp(new Vec3(0.741, 0.318, 0.227), Math.pow(1.0 - sunY, 2.5))
-            .lerp(new Vec3(0.314, 0.408, 0.525), Math.clamp((sunY + 0.1) / -0.1, 0.0, 1.0));
+        Vec3 col = (new Vec3(1.0, 0.992, 0.957)).scale(1.05)
+            .lerp(new Vec3(0.741, 0.618, 0.527), Math.pow(1.0 - sunY, 2.5))
+                //.lerp(new Vec3(0.741, 0.318, 0.227), Math.pow(1.0 - sunY, 2.5))
+            .lerp(new Vec3(0.314, 0.408, 0.525), Math.clamp((sunY + 0.1) / -0.1, 0.0, 1.0)).normalize();
+
+        return new Vec3(
+                Math.min(col.x(), 1.0),
+                Math.min(col.y(), 1.0),
+                Math.min(col.z(), 1.0)
+        );
     }
 
     // dev.protomanly.pmweather.weather.Clouds.getCloudDensity()
